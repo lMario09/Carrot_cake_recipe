@@ -1,0 +1,83 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 800px) 1fr;
+    grid-template-rows: 3rem 2fr 3rem;
+    justify-content: center;
+    gap: 20px;
+    font-size: 17px;
+    color: rgb(82, 54, 0);
+    background-color: rgb(252, 230, 189);
+}
+.corpo {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: rgb(248, 230, 197);
+    border: 3px solid rgb(252, 222, 166);
+    border-radius: 10px;
+    padding: 20px;
+}
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.descricao {
+    padding: 5px;
+}
+h1 {
+    font-size: 40px;
+    color: rgb(82, 54, 0);
+}
+p {
+    margin-left: 10px;
+    text-align: justify;
+}
+dt {
+    font-size: 25px;
+    padding: 10px;
+}
+dd {
+    padding: 5px;
+}
+.img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(131, 131, 131);
+    animation: slide .5s forwards;
+}
+
+.js .js-descr div {
+    display: none;
+}
+
+.js-descr div.ativo {
+    display: block !important;
+    animation: slide .5s forwards;
+}
+
+.js-descr dt::after {
+    content: "⮞";
+    margin-left: 10px;
+}
+.js-descr dt.ativo::after {
+    content: "⮝";
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px. 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
